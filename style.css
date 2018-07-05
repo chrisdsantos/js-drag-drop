@@ -1,0 +1,28 @@
+body{
+	font-family: Helvetica, sans-serif;
+}
+
+.dropbin{
+	width: 200px;
+	height: 30px;
+	background-color: grey;
+	border: 1px solid black;
+	display: block;
+}
+
+.draggable{
+	background-color: black;
+	color: white;
+	padding: 5px;
+	display: block;
+	width:190px;
+	height:20px;
+}
+
+.container{
+	border: 1px solid black;
+	width: 400px;
+	height: 160px;
+	display: inline-block;
+	padding: 5px;
+}
