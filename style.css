@@ -8,6 +8,7 @@ body{
 	background-color: grey;
 	border: 1px solid black;
 	display: block;
+	margin: 2px;
 }
 
 .draggable{
@@ -21,8 +22,21 @@ body{
 
 .container{
 	border: 1px solid black;
-	width: 400px;
-	height: 160px;
-	display: inline-block;
-	padding: 5px;
+	width: 45%;
+	height: 45%;
+	top: 0px;
+	position: fixed;
+}
+
+#items{
+	left: 0%;
+}
+
+#bin{
+	left: 45%;
+}
+
+button{
+	position:fixed;
+	bottom: 0px;
 }
