@@ -40,3 +40,65 @@ button{
 	position:fixed;
 	bottom: 0px;
 }
+
+.controls{
+	width: 36px;
+	height: 36px;
+	margin-right: 1px;
+	display: inline-block;
+	background-color: rgb(100, 100, 223);
+	position: relative;
+}
+
+#controls{
+	position: fixed;
+	bottom: 30px;
+	left: 0px;
+}
+
+#module{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+#image{
+	background-color: black;
+	animation: fadein 5s infinite;
+	position: relative;
+	height: 1px;
+}
+
+#motion-2{
+	background-color: red;
+	animation: rotate 10s infinite;
+	position: relative;
+	top: 100px;
+	left:100px;
+	height: 10px;
+	width: 100px;
+	animation-timing-function: linear;
+	animation-duration: 1s;
+}
+
+@keyframes fadein{
+	from{
+		width: 0%;
+		opacity: 0.0;
+	}
+	to{
+		width: 100%;
+		opacity: 1.0;
+	}
+}
+
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(180deg);
+	}
+}

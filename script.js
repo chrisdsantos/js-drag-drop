@@ -33,7 +33,7 @@ class MatchGame{
 	static checkAnswer(){
 		for(var i=0;i<MatchGame.data.length;i++){
 			if(document.getElementById(MatchGame.data[i].match).children.length === 1){
-				document.getElementById(MatchGame.data[i].match).firstChild.id == MatchGame.data[i].label ? console.log("yes") : console.log("no");
+				document.getElementById(MatchGame.data[i].match).firstChild.id == MatchGame.data[i].label ? console.log(i+": yes") : console.log(i+": no");
 			}
 		}
 	}
@@ -58,14 +58,20 @@ class MatchGame{
     }
 }
 
+// *
+// * DROPBIN CLASS
+// *
+
 class DropBin{
 	constructor(id, label, isanswer=false){
 		//create div and text
 		var newDiv = document.createElement("div");
-		//var newContent = document.createTextNode(label);
-
-		//append text to div
-		//newDiv.appendChild(newContent);
+		
+		// if(label != ""){
+		// 	var newContent = document.createTextNode(label);
+		// 	//append text to div
+		// 	newDiv.appendChild(newContent);
+		// }
 		
 		//set attributes
 		newDiv.setAttribute("class", "dropbin");
@@ -88,6 +94,10 @@ class DropBin{
 		}
 	}
 }
+
+// *
+// * DRAGGABLE CLASS
+// *
 
 class Draggable{
 	constructor(id, label){
