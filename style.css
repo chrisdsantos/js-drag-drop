@@ -1,6 +1,13 @@
 body{
 	font-family: Helvetica, sans-serif;
+	background-color: #111111;
 }
+
+
+
+/* *
+// * ELEMENTS
+// */
 
 .dropbin{
 	width: 200px;
@@ -21,40 +28,85 @@ body{
 }
 
 .container{
-	border: 1px solid black;
-	width: 45%;
-	height: 45%;
+	border: 1px solid lightgray;
+	width: 50%;
 	top: 0px;
 	position: fixed;
 }
+
+
+
+/* *
+// * CONTAINERS
+// */
 
 #items{
 	left: 0%;
 }
 
 #bin{
-	left: 45%;
-}
-
-button{
-	position:fixed;
-	bottom: 0px;
-}
-
-.controls{
-	width: 36px;
-	height: 36px;
-	margin-right: 1px;
-	display: inline-block;
-	background-color: rgb(100, 100, 223);
-	position: relative;
+	left: 50%;
 }
 
 #controls{
 	position: fixed;
-	bottom: 30px;
+	bottom: 0px;
 	left: 0px;
+	width: 100%;
+	background-color:#333333;
 }
+
+@media screen and (max-width: 800px){
+	#controls{
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		background-color:#333333;
+	}
+}
+
+#video{
+	width: 100%;
+}
+
+/* *
+// * CONTROL BUTTONS
+// */
+
+button{
+	position: fixed;
+	bottom: 40px;
+}
+
+.controls{
+	width: 32px;
+	border-right: 1px solid #666666;
+	display: inline-block;
+	position: relative;
+	color: #666666;
+	text-align: center;
+	font-size: 24px;
+	padding: 4px;
+}
+
+@media screen and (max-width: 1000px){
+	.controls{
+		width: 18%;
+		border-right: 0px;
+	}
+}
+
+.controls:hover{
+	color: #FFFFFF;
+}
+
+
+
+
+/* *
+// * MODULE WINDOW
+// */
 
 #module{
 	position: fixed;
@@ -64,33 +116,37 @@ button{
 	width: 100%;
 }
 
+
+
+/* *
+// * SAMPLE ANIMATIONS
+// */
+
 #image{
-	background-color: black;
+	background-color: lightblue;
 	animation: fadein 5s infinite;
 	position: relative;
-	height: 1px;
+	animation-timing-function: linear;
+	height: 5px;
 }
 
 #motion-2{
-	background-color: red;
-	animation: rotate 10s infinite;
+	background-color: blue;
+	animation: fadein 3s infinite;
 	position: relative;
-	top: 100px;
-	left:100px;
-	height: 10px;
-	width: 100px;
+	top: 0px;
+	left: 0px;
 	animation-timing-function: linear;
-	animation-duration: 1s;
 }
 
 @keyframes fadein{
 	from{
-		width: 0%;
-		opacity: 0.0;
-	}
-	to{
 		width: 100%;
 		opacity: 1.0;
+	}
+	to{
+		width: 0%;
+		opacity: 0.0;
 	}
 }
 

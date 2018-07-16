@@ -6,22 +6,22 @@
 // ***********************************************************************
 
 class MatchGame{
-	constructor(){
+	constructor(binID){
 		const items = document.createElement("div");
 		items.setAttribute("id", "items");
 		items.setAttribute("class", "container");
-		document.body.appendChild(items);
+		document.getElementById(binID).appendChild(items);
 
 		const bin = document.createElement("div");
 		bin.setAttribute("id", "bin");
 		bin.setAttribute("class", "container");
-		document.body.appendChild(bin);
+		document.getElementById(binID).appendChild(bin);
 
 		const submit = document.createElement("button");
 		submit.setAttribute("type", "button");
 		submit.setAttribute("onclick", "MatchGame.checkAnswer()");
 		submit.appendChild(document.createTextNode("submit"));
-		document.body.appendChild(submit);
+		document.getElementById(binID).appendChild(submit);
 
 		MatchGame.loadData("items.json");
 	}
@@ -57,6 +57,8 @@ class MatchGame{
     	}
     }
 }
+
+
 
 // *
 // * DROPBIN CLASS
@@ -94,6 +96,8 @@ class DropBin{
 		}
 	}
 }
+
+
 
 // *
 // * DRAGGABLE CLASS
